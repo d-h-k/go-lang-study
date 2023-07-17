@@ -4,6 +4,15 @@ import "fmt"
 
 func main() {
 
+	if false {
+		study()
+	}
+
+	cards := newDeck()
+
+}
+
+func study() {
 	cards := newDeck()
 	for i, card := range cards {
 		fmt.Println(i, card)
@@ -27,3 +36,5 @@ func main() {
 	// fmt.Println([]byte(dd))
 
 }
+
+// gopath 설정 해주기

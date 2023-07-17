@@ -46,3 +46,23 @@ func (d Deck) toString() string {
 func (d Deck) saveToFile(fileName string) error {
 	return os.WriteFile(fileName, []byte(d.toString()), 0666)
 }
+
+func newDeckFromFile(fileName string) Deck {
+	data, err := os.ReadFile(fileName)
+
+	if err != nil {
+		//고의 오류처리는 쉽지않다
+		//여기서 해야할 선택지 두개
+		// Option1 : 새로운 덱을 만들어버림
+		// Option2 : 프로그램 중단시켜버리기
+		fmt.Println("cannot Read")
+		fmt.Printf("err: %v\n", err)
+		os.Exit(1)
+	}
+
+	dataStrings := strings.Split(string(data), ",")
+	//return dataStrings;
+	return Deck(dataStrings)
+
+	//nil << 널같은건데 널은 아닌거같고 값이 없다는뜻이긴 한듯
+}
