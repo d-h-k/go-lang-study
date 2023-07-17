@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 
-	cards := deck{"Ace", "dia"}
+	cards := newDeck()
 	//cards = append(cards, "six of spade")
 	//fmt.Println(cards)
 

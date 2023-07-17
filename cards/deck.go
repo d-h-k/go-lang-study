@@ -3,9 +3,25 @@ package main
 import "fmt"
 
 // decks << ??
-type deck []string
+type Deck []string
 
-func (cards deck) print() {
+func newDeck() Deck {
+	cards := Deck{}
+	//슈트랑 벨류스
+	cardSuits := []string{"Ace", "Two", "Three"}
+	cardValues := []string{"King", "Five", "Two", "Three"}
+
+	for _, suit := range cardSuits {
+		//for i, suit := range cardSuits {
+		for _, value := range cardValues {
+			//for j, value := range cardValues {
+			cards = append(cards, suit+"of"+value)
+		}
+	}
+	return cards
+}
+
+func (cards Deck) print() {
 	for i, card := range cards {
 		fmt.Println(i, card)
 	}
