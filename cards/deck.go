@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os" // 과거에는 io/util 패키지였는데 변경된거임
+	"strings"
+)
 
 // decks << ??
 type Deck []string
@@ -29,6 +33,16 @@ func (cards Deck) print() {
 	// 언어 전체에서 보게 될 형태임 >> 객체와 그 객체가 사용할 메서드까지
 }
 
-func deal(deck Deck, handSize int) (Deck, Deck) {
+func deal(d Deck, handSize int) (Deck, Deck) {
 	return deck[:handSize], deck[handSize:]
+}
+
+func (d Deck) toString() string {
+	return strings.Join([]string(deck), ",")
+}
+
+//Todo :  리시버랑 아규먼트 차이점 공부하기
+
+func (d Deck) saveToFile(fileName string) error {
+	return os.WriteFile(fileName, []byte(d.toString()), 0666)
 }

@@ -18,4 +18,10 @@ func main() {
 	for _, card := range d2 {
 		fmt.Println(card)
 	}
+
+	g := "hi here"
+	fmt.Println([]byte(g))
+
+	dd := newDeck()
+	fmt.Println([]byte(dd))
 }
