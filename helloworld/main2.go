@@ -2,7 +2,7 @@ package main // 실행가능한 패키지
 
 import "fmt"
 
-func main() {
+func main2() {
 
 	// var card string = "ACE of spades"
 	// fmt.Println(card)

@@ -114,3 +114,7 @@ go work init
   }
 }
 ```
+
+- 아 모듈문제인거같은데 정확히 모르겠음
+
+- https://github.com/golang/tools/blob/master/gopls/doc/workspace.md << 이거보고 해결함
