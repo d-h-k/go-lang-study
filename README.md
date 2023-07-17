@@ -103,3 +103,14 @@ In summary, while GOPATH used to be an important environment variable in older v
 ```
 go work init
 ```
+
+- 그리고 `cmd + ,` 키 눌러서 go settings.json 파일에 추가
+
+```json
+{
+  "..." : "..."
+  "gopls": {
+    "experimentalWorkspaceModule": true
+  }
+}
+```
