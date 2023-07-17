@@ -5,11 +5,17 @@ import "fmt"
 func main() {
 
 	cards := newDeck()
-	//cards = append(cards, "six of spade")
-	//fmt.Println(cards)
-
-	// // 반복문
 	for i, card := range cards {
 		fmt.Println(i, card)
+	}
+
+	d1, d2 := deal(cards, 5)
+
+	for _, card := range d1 {
+		fmt.Println(card)
+	}
+	fmt.Println("==================")
+	for _, card := range d2 {
+		fmt.Println(card)
 	}
 }
