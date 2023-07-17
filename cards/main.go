@@ -23,5 +23,7 @@ func main() {
 	fmt.Println([]byte(g))
 
 	dd := newDeck()
-	fmt.Println([]byte(dd))
+	dd.saveToFile("hello")
+	// fmt.Println([]byte(dd))
+
 }

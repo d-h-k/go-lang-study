@@ -34,11 +34,11 @@ func (cards Deck) print() {
 }
 
 func deal(d Deck, handSize int) (Deck, Deck) {
-	return deck[:handSize], deck[handSize:]
+	return d[:handSize], d[handSize:]
 }
 
 func (d Deck) toString() string {
-	return strings.Join([]string(deck), ",")
+	return strings.Join([]string(d), ",")
 }
 
 //Todo :  리시버랑 아규먼트 차이점 공부하기
