@@ -83,3 +83,23 @@ func CCC () {
 - Slice
   - 가변길이 리스트 (grow, shrink 가능)
   - 모든 원소들의 타입이 같아야함
+
+## 환경설정 에러
+
+- 아래와 같은 에러 메시지가 출력되지만, 정상적으로 실행되었습니다
+
+```
+GOPATH is an environment variable used by the Go programming language to determine the location of the Go workspace on your system. The Go workspace is a directory hierarchy where Go source code and its dependencies are stored.
+
+In the past, the GOPATH environment variable was commonly used to specify the root of the Go workspace. It could contain multiple directories, such as bin, src, and pkg, which served different purposes. The src directory typically contained the source code of Go packages, pkg stored compiled package objects, and bin held executable binaries.
+
+However, since Go version 1.11, the Go module system was introduced, which changed the way dependencies are managed and eliminated the need for a fixed GOPATH. With modules, you can organize your Go code in any directory, and the Go tooling automatically manages dependencies based on the go.mod file present in the project.
+
+Nowadays, it's recommended to use Go modules and avoid relying on the GOPATH environment variable for most projects. You can initialize a new Go module in a directory outside of the GOPATH by using the go mod init command.
+
+In summary, while GOPATH used to be an important environment variable in older versions of Go, it has become less relevant with the introduction of the Go module system. It's recommended to use Go modules and let the Go tooling handle dependencies without relying on a fixed GOPATH.
+```
+
+```
+go work init
+```
