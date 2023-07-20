@@ -182,3 +182,13 @@ t.Errorf("Expected deck length of 16, but got %v", len(d))
 ```
 
 - 테스트 실행 명령어 : `go test`
+
+### 나의 궁금함
+
+```
+1) t *testing.T  << 이거뭐임.. 포인터야?
+2) assert 쓰고싶다
+3) 모듈 패키지 개념 정리 필요해
+4) 리시버 개념
+5) 리턴파라미터 몇개까지 가능?
+```
