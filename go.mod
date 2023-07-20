@@ -1,3 +1,3 @@
-module example.com/greetings
+module cards
 
 go 1.19

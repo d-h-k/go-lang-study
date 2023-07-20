@@ -142,6 +142,43 @@ go: go.mod 파일이 현재 디렉토리나 상위 디렉토리에 없습니다.
 go mod init cards
 
 go test그런 다음 VSCode 내에서 테스트 실행 기능을 사용하거나 터미널에서 실행할 수 있습니다 .
+```
 
+- 내가쓴거
 
 ```
+go mod init cards
+
+go: creating new go.mod: module cards
+go: to add module requirements and sums:
+
+          go mod tidy
+```
+
+## Errorf 사용에 관하여
+
+```
+Errorf 호출에 인수가 있지만 형식화 지시문은 없습니다.
+다음 강의에서는 Errorf를 사용하여 몇 가지 테스트를 실행할 것입니다 . 서식 지시문을 생략하면 이제 테스트가 실패하므로 즉시 추가해야 합니다.
+
+참고 - 이 지시문은 원래 강의 끝에 추가되었습니다.
+
+8:00 타임스탬프부터 시작하여 테스트를 실행할 때 다음을 변경합니다.
+
+t.Errorf("Expected deck length of 16, but got", len(d))
+
+이에:
+
+t.Errorf("Expected deck length of 16, but got %v", len(d))
+```
+
+### 고에서의 테스트
+
+```
+원본파일 : deck.go
+테스트파일 : deck_test.go
+
+테스트파일 규칙 : {원본파일명}_test.go
+```
+
+- 테스트 실행 명령어 : `go test`
