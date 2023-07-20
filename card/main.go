@@ -9,9 +9,13 @@ func main() {
 	}
 
 	cards := newDeck()
-	for _, card := range cards {
-		fmt.Println(card)
-	}
+	// for _, card := range cards {
+	// 	fmt.Println(card)
+	// }
+
+	cards.print()
+	cards.shuffle()
+	cards.print()
 
 }
 

@@ -118,3 +118,30 @@ go work init
 - 아 모듈문제인거같은데 정확히 모르겠음
 
 - https://github.com/golang/tools/blob/master/gopls/doc/workspace.md << 이거보고 해결함
+
+## 카드 미니 프로젝트
+
+### 셔플기능
+
+- RAND 패키지 : 공식문서 >>
+
+```
+func Intn(n int) int
+```
+
+## 고 모듈
+
+```
+go.mod 파일 생성
+다가오는 강의에서 우리는 첫 번째 테스트를 실행할 것입니다. 이렇게 하려면 go.mod 파일을 만들어야 합니다. 그렇지 않으면 다음과 같은 오류가 표시됩니다.
+
+go: go.mod 파일이 현재 디렉토리나 상위 디렉토리에 없습니다. '이동 도움말 모듈' 참조
+
+카드 프로젝트 디렉토리 내에서 다음을 실행합니다.
+
+go mod init cards
+
+go test그런 다음 VSCode 내에서 테스트 실행 기능을 사용하거나 터미널에서 실행할 수 있습니다 .
+
+
+```

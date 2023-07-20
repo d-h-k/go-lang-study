@@ -2,6 +2,9 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
+	"time"
+
 	"os" // 과거에는 io/util 패키지였는데 변경된거임
 	"strings"
 )
@@ -65,4 +68,14 @@ func newDeckFromFile(fileName string) Deck {
 	return Deck(dataStrings)
 
 	//nil << 널같은건데 널은 아닌거같고 값이 없다는뜻이긴 한듯
+}
+
+func (d Deck) shuffle() {
+
+	myRand := rand.New(rand.NewSource(time.Now().UnixNano()))
+
+	for index := range d {
+		newPosition := myRand.Intn(len(d) - 1)
+		d[index], d[newPosition] = d[newPosition], d[index] // swap 을 아주 쉽게 할 수 있다
+	}
 }
