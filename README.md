@@ -192,3 +192,5 @@ t.Errorf("Expected deck length of 16, but got %v", len(d))
 4) 리시버 개념
 5) 리턴파라미터 몇개까지 가능?
 ```
+
+### go Struct (구조체)
