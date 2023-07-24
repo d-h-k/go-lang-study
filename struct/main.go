@@ -35,9 +35,22 @@ func main() {
 	fmt.Printf("printf 출력용법2 : %+v \n", alex)
 
 	jimmy := jim()
+	jimmyPointer := &jimmy
+	fmt.Print("\n\n")
+	fmt.Println("안되야한다")
 	jimmy.updateFirstName("goodspeed")
 	jimmy.print()
+	fmt.Println("되야한다")
+	jimmyPointer.updateFirstNamePointer("goodMan")
+	jimmy.print()
+}
 
+func (p person) updateFirstName(newFirstName string) {
+	p.firstName = newFirstName // 동작을 안함! 미친 !
+}
+
+func (personPointer *person) updateFirstNamePointer(newFirstName string) {
+	(*personPointer).firstName = newFirstName
 }
 
 func jim() person {
@@ -52,9 +65,5 @@ func jim() person {
 
 func (p person) print() {
 	// 리시버를 사용해봅니다
-	fmt.Printf("%+v", p)
-}
-
-func (p person) updateFirstName(newFirstName string) {
-	p.firstName = newFirstName // 동작을 안함! 미친 !
+	fmt.Printf("%+v\n", p)
 }
