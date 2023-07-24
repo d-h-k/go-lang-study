@@ -194,3 +194,29 @@ t.Errorf("Expected deck length of 16, but got %v", len(d))
 ```
 
 ### go Struct (구조체)
+
+## go 포인터
+
+- 이코드가 동작하지 않는 원인은?
+
+```go
+func (p person) updateFirstName(newFirstName string) {
+	p.firstName = newFirstName // 동작을 안함! 미친 !
+}
+```
+
+## 포인터 배우기 전에 RAM
+
+```
+jim := person ...
+jimmy := person ...
+
+Address  Value
+0000
+0001      jim
+0002
+0003      jimmy
+0004
+```
+
+- 패스바이 벨류 : 방어적 복사가 기본인 언어

@@ -34,7 +34,10 @@ func main() {
 	fmt.Printf("printf 출력용법2 : %+v \n", zeroValue)
 	fmt.Printf("printf 출력용법2 : %+v \n", alex)
 
-	jim()
+	jimmy := jim()
+	jimmy.updateFirstName("goodspeed")
+	jimmy.print()
+
 }
 
 func jim() person {
@@ -45,4 +48,13 @@ func jim() person {
 	}
 	fmt.Printf("%+v", jim)
 	return jim
+}
+
+func (p person) print() {
+	// 리시버를 사용해봅니다
+	fmt.Printf("%+v", p)
+}
+
+func (p person) updateFirstName(newFirstName string) {
+	p.firstName = newFirstName // 동작을 안함! 미친 !
 }
