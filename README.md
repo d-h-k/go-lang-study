@@ -220,3 +220,45 @@ Address  Value
 ```
 
 - 패스바이 벨류 : 방어적 복사가 기본인 언어
+
+### 포인터 개념과 연산자
+
+- 엠퍼센드 '&' : 메모리 주소를 주는 연산자
+- 스타 '\*' : 그 주소에 있는 메모리들의 값을 내놔라
+- 코드보면서 설명
+
+```go
+func main() {
+	jimmy := jim()
+	jimmyPointer := &jimmy
+	fmt.Print("\n\n")
+	fmt.Println("안되야한다")
+	jimmy.updateFirstName("goodspeed")
+	jimmy.print()
+	fmt.Println("되야한다")
+	jimmyPointer.updateFirstNamePointer("goodMan")
+	jimmy.print()
+}
+
+func (p person) updateFirstName(newFirstName string) {
+	p.firstName = newFirstName // 동작을 안함! 미친 !
+}
+
+// *person : 타입을 설명하는건데, person 형식의 포인터로 동작한다는 타입을 설명해주는거임
+func (personPointer *person) updateFirstNamePointer(newFirstName string) {
+	(*personPointer).firstName = newFirstName
+
+  // (*personPointer) : 이건 연산자에요, 이 포인트가 가르치는 메모리 주소에 담겨있는 값을 가져와라
+  // 포인터에 담겨있는
+}
+```
+
+### 포인터
+
+```
+personPointer = *person
+```
+
+```
+personPointer := &jim
+```

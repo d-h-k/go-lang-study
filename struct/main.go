@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"unsafe"
 )
 
 type person struct {
@@ -43,6 +44,11 @@ func main() {
 	fmt.Println("되야한다")
 	jimmyPointer.updateFirstNamePointer("goodMan")
 	jimmy.print()
+
+	// unsafe
+	fmt.Println("Size of 'jimmy' variable:", unsafe.Sizeof(jimmy))
+	fmt.Println("Size of 'jimmyPointer' variable:", unsafe.Sizeof(jimmyPointer))
+
 }
 
 func (p person) updateFirstName(newFirstName string) {
