@@ -262,3 +262,28 @@ personPointer = *person
 ```
 personPointer := &jim
 ```
+
+### 포인터 관점에서 Array 와 Slices
+
+#### 배경설명
+
+- 슬라이스
+
+- 어레이
+
+- 슬라이스는 일종의 어레이다 : 3가지 부분으로 나눠짐
+  - 포인터(ptr to head)
+  - 사이즈(lenght)
+  - 어쩌고(Cap) >> 데이터의 어레이가 저장되는것?
+
+#### 서론2 : 데이터타입
+
+- 벨류타입 (자바에서의 프리미티브 타입)
+  - int, float, bool, string, structs ....
+- 레퍼런스 타입
+  - slices, map, channels, 등등..
+  - 여전히 데
+
+#### 본론
+
+- 슬라이스 데이터타입은 레퍼런스타입이다
