@@ -1,5 +1,5 @@
 package main
 
-type bot interface {
+type bot2 interface {
 	getGreeting() string
 }
